@@ -23,6 +23,12 @@ inputString:            ; insert into buffer input from keyboard
 
 
 startInputString:       ; save where start of input is
+    ; print carriage return and newline to screen
+    mov al, 13
+    int 0x10 
+    mov al, 0x0a
+    int 0x10
+
     mov dx, bx
     jmp inputString
 
