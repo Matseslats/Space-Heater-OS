@@ -24,9 +24,9 @@ inputString:            ; insert into buffer input from keyboard
 
 startInputString:       ; save where start of input is
     ; print carriage return and newline to screen
-    mov al, 13
+    mov al, 13          ; carriage return
     int 0x10 
-    mov al, 0x0a
+    mov al, 0x0a        ; new line
     int 0x10
 
     mov dx, bx
